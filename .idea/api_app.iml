@@ -143,7 +143,6 @@
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.10.4, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-byebug (v3.4.2, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.3.4, ruby-2.2.6-p396) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="puma (v3.7.0, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.5, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cors (v0.4.1, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, ruby-2.2.6-p396) [gem]" level="application" />
@@ -152,6 +151,9 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-deprecated_sanitizer (v1.0.3, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v1.0.8, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_12factor (v0.0.3, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.5, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_stdout_logging (v0.0.5, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.6, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v12.0.0, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.5.4, ruby-2.2.6-p396) [gem]" level="application" />
@@ -167,6 +169,7 @@
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2016.10, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webrick (v1.3.1, ruby-2.2.6-p396) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

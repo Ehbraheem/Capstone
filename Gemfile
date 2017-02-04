@@ -10,9 +10,11 @@ gem 'jbuilder', '~>2.0', '>= 2.6.0'
 group :development do
   gem 'spring', '~>2.0', '>= 2.0.0'
   gem 'tzinfo-data', platforms: [:mswin, :mingw, :x64_mingw, :jruby]
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 end
 
 gem 'pg', '~>0.19', '>= 0.19.0'
+gem 'mongoid', '~>5.1', '>= 5.1.5'
 
 
 

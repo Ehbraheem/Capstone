@@ -3,7 +3,7 @@ development:
     default:
       database: api_app_development
       hosts:
-        -  <%= ENV['MONGO_HOST'] ||= localhost:27017 %>
+        -  <%= ENV['MONGO_HOST'] ||= "localhost:27017" %>
       options:
 
   options:
@@ -13,7 +13,7 @@ test:
     default:
       database: api_app_test
       hosts:
-        - <%= ENV['MONGO_HOST'] ||= localhost:27017 %>
+        -  <%= ENV['MONGO_HOST'] ||= "localhost:27017" %>
       options:
         read:
           mode: :primary

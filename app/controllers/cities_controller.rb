@@ -12,7 +12,7 @@ class CitiesController < ApplicationController
   # GET /cities/1
   # GET /cities/1.json
   def show
-    # render json: @city
+    render json: @city
   end
 
   # POST /cities
@@ -22,7 +22,7 @@ class CitiesController < ApplicationController
 
     if @city.save
       # render json: @city, status: :created, location: @city
-      render :show, status: :created, location: @city
+      render :s, status: :created, location: @city
     else
       render json: @city.errors, status: :unprocessable_entity
     end

@@ -3,7 +3,7 @@
  * SPA JS manifest file
  */
 
-//= require jquery
+//= require jquery2
 //= require bootstrap
 //= require angular
 //= require angular-ui-router

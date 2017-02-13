@@ -1,4 +1,5 @@
 require 'rails_helper'
+# TODO: DRY-out test
 
 RSpec.describe "ApiDevelopments", type: :request do
 
@@ -44,8 +45,21 @@ RSpec.describe "ApiDevelopments", type: :request do
       expect(response).to have_http_status :ok
       expect(parsed_body["name"]).to eq "test"
       expect(parsed_body).to include("created_at")
-      expect(parsed_body).to include(id: object.id.to_s)
+      # byebug
+      expect(parsed_body).to include("id" => object.id.to_s)
     end
   end
+
+  # # TODO: Fix this test
+  # describe "Allow only GET requests" do
+  #
+  #   it "on RDBMS-backed resources" do
+  #     object = City.create name: "test"
+  #     # byebug
+  #     put city_path(object), {city: {name: "test1"}}
+  #     # post cities_path, {city: {name: "test"}}
+  #     expect(response).to have_http_status :no_content
+  #   end
+  # end
 
 end

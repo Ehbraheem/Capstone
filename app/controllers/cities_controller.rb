@@ -1,35 +1,29 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :update, :destroy]
 
-  # GET /cities
-  # GET /cities.json
+
   def index
     @cities = City.all
 
     # render json: @cities
   end
 
-  # GET /cities/1
-  # GET /cities/1.json
   def show
-    render json: @city
+    # render json: @city
   end
 
-  # POST /cities
-  # POST /cities.json
   def create
     @city = City.new(city_params)
 
     if @city.save
       # render json: @city, status: :created, location: @city
-      render :s, status: :created, location: @city
+      render :show, status: :created, location: @city
     else
       render json: @city.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /cities/1
-  # PATCH/PUT /cities/1.json
+
   def update
     @city = City.find(params[:id])
 
@@ -40,8 +34,7 @@ class CitiesController < ApplicationController
     end
   end
 
-  # DELETE /cities/1
-  # DELETE /cities/1.json
+
   def destroy
     @city.destroy
 
@@ -55,6 +48,7 @@ class CitiesController < ApplicationController
     end
 
     def city_params
+      byebug
       params.require(:city).permit(:name)
     end
 end

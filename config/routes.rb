@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
 
-  scope :api do
-    resources :cities, except: [:new, :edit]
-    resources :states, except: [:new, :edit]
+  scope :api, defaults: { format: :json} do
+    resources :cities, except: [:new, :edit, :delete, :patch]
+    resources :states, except: [:new, :edit, :delete, :patch]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

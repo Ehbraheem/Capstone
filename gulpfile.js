@@ -172,10 +172,16 @@ gulp.task('dist:assets', ['build'], function () {
 });
 
 // build/copy over HTML files
+// gulp.task('dist:html',  function () {
+// 	return gulp.src(cfg.html.src).pipe(debug())
+// 		.pipe(htmlMin({ collapseWhiteSpace: true})) // minify HTML
+// 		.pipe(gulp.dest(distPath)).pipe(debug());
+// });
+
 gulp.task('dist:html',  function () {
-	return gulp.src(cfg.html.src).pipe(debug())
-		.pipe(htmlMin({ collapseWhiteSpace: true})) // minify HTML
-		.pipe(gulp.dest(distPath)).pipe(debug());
+    return gulp.src(cfg.html.src, { base: srcPath + '/javascripts'}).pipe(debug())
+        .pipe(htmlMin({ collapseWhiteSpace: true})) // minify HTML
+        .pipe(gulp.dest(distPath)).pipe(debug());
 });
 
 //build/copy over fonts files

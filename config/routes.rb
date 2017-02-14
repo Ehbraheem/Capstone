@@ -8,11 +8,11 @@ Rails.application.routes.draw do
 
   # to solve AngularJS problem when served from the public directory
   get "/client-assets/:name.:format", :to => redirect("/client/client-assets/%{name}.%{format}")
-  get '/', to: redirect('/client')
+  # get '/', to: redirect('/client')
 
-  # root 'ui#index'
-  # get '/ui' => 'ui#index'
-  # get '/ui#' => 'ui#index'
+  root 'ui#index'
+  get '/ui' => 'ui#index'
+  get '/ui#' => 'ui#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -21,7 +21,10 @@
             .state('home', {
                 url : '/',
                 templateUrl : APP_CONFIG.main_page_html,
-
+            })
+            .state('other', {
+                url : '/other',
+                template : "<city></city>"
             })
 
         $urlRouterProvider.otherwise('/');

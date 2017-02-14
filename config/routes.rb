@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :states, except: [:new, :edit, :delete, :patch]
   end
 
+  # to solve AngularJS problem when served from the public directory
+  get "/client-assets/:name.:format", :to => redirect("/client/client-assets/%{name}.%{format}")
+
   get '/ui' => 'ui#index'
   get '/ui#' => 'ui#index'
 

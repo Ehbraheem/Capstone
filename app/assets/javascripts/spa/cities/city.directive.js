@@ -7,7 +7,7 @@
 
     angular
         .module('spa.cities')
-        .directive("sdCity", CitiesDirective);
+        .directive("sdCities", CitiesDirective);
 
     CitiesDirective.$inject = ['spa.APP_CONFIG'];
 

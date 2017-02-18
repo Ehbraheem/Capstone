@@ -26,6 +26,6 @@
     // nests the default payload below a "city" element
     // as required by Rails API by default
     function buildNextedBody (data) {
-        return angular.toJson(city: data);
+        return angular.toJson({city: data});
     };
 })();

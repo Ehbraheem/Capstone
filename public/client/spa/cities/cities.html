@@ -1,0 +1,23 @@
+<div>
+    <h2>City</h2>
+    <span>(from spa/cities/cities.html)</span>
+
+    <form>
+        <div class="form-group">
+            <label for="name" class="control-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" ng-model="citiesVM.city.name" required>
+        </div>
+        <div class="form-group">
+            <button ng-if="!citiesVM.city.id" class="btn btn-primary btn-lg" ng-click="citiesVM.create()">Create city</button>
+            <button ng-if="citiesVM.city.id" class="btn btn-primary btn-lg" ng-click="citiesVM.update(citiesVM.city)">Update city</button>
+            <button ng-if="citiesVM.city.id" class="btn btn-primary btn-lg" ng-click="citiesVM.remove()">Delete city</button>
+        </div>
+    </form>
+
+    <ul>
+        <li ng-repeat="city in citiesVM.cities | orderBy: 'name' ">
+            <a ng-click="citiesVM.edit(city)">{{city.name}}</a>
+        </li>
+    </ul>
+
+</div>

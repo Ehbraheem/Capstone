@@ -48,7 +48,6 @@ class CitiesController < ApplicationController
     end
 
     def city_params
-      byebug
       params.require(:city).permit(:name)
     end
 end

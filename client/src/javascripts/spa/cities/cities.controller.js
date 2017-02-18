@@ -20,7 +20,7 @@
         return;
 
         /////////////////////////////
-        
+
         function  activate() {
             newCity();
             citiesVM.cities = City.query();
@@ -36,34 +36,16 @@
         function newCity() {
             citiesVM.city = new City();
         }
-        
+
         function edit(object) {
-            console.log("selected ", object);
+            // console.log("selected ", object);
             citiesVM.city = object;
         }
-        
+
         function remove() {
-            citiesVM.city.$remove()
+            citiesVM.city.$delete()
                 .then(function(response) {
-                    console.log(response)
-                })
-                .then(errorHandler);
-        }
-        
-        function create() {
-            citiesVM.city.$save
-                .then(function (response) {
-                    console.log(response);
-                    citiesVM.cities.push(citiesVM.city);
-                    newCity();
-                })
-                .catch(errorHandler());
-        }
-        
-        function update() {
-            citiesVM.city.$update()
-                .then(function(response) {
-                    console.log(response);
+                    // console.log(response)
 
                     // remove from local array
                     removeElement(citiesVM.cities, citiesVM.city);
@@ -73,6 +55,25 @@
 
                     // replace edit area with prototype instance
                     newCity();
+                })
+                .catch(errorHandler);
+        }
+
+        function create() {
+            citiesVM.city.$save()
+                .then(function (response) {
+                    // console.log(response);
+                    citiesVM.cities.push(citiesVM.city);
+                    newCity();
+                })
+                .catch(errorHandler());
+        }
+
+        function update() {
+            citiesVM.city.$update()
+                .then(function(response) {
+                    // console.log(response);
+
                 })
                 .catch(errorHandler);
         }

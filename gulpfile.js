@@ -156,7 +156,7 @@ gulp.task('browserSync', ['build'], function () {
 });
 
 // prepare the development environment, launch server and watch for changes
-gulp.task('run', ['build', 'browserSync'], function () {
+gulp.task('run', sync.sync(['build','dist', 'browserSync']), function () {
 	// extensions to watch() within even if we need to pre-process source tree
 	gulp.watch(cfg.css.src, ['css']);
 });
@@ -195,11 +195,22 @@ gulp.task('dist:fonts', function () {
 gulp.task('dist', sync.sync(['clean', 'build', 'dist:assets', 'dist:fonts', 'dist:html']));
 
 
+
 // execute the dist webapp in a web server
 gulp.task('dist:run', ['dist'], function () {
 	browserSyncInit(distPath);
 });
 
+
+// Dist for the default task to kick start dev and dist area
+
+gulp.task('start', ['build', 'browserSync'], function () {
+    // extensions to watch() within even if we need to pre-process source tree
+    gulp.watch(cfg.css.src, ['css']);
+});
+gulp.task('distribution', sync.sync(['start', 'clean', 'dist:assets', 'dist:fonts', 'dist:html']));
+
+gulp.task("default", ["distribution"]);
 
 
 // gulp.task("hello", function () {
